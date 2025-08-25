@@ -5,10 +5,10 @@ import {
   CardHeader,
   CardTitle,
 } from "./UI/Card";
-import { Button } from "./UI/button";
-import { Badge } from "./UI/badge";
+import { Button } from "./UI/Button";
+import { Badge } from "./UI/Badge";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./UI/Tabs";
-import { ExternalLink, Github, Eye, Monitor, Smartphone } from "lucide-react";
+import { ExternalLink, Github, Monitor, Smartphone } from "lucide-react";
 import { ImageWithFallback } from "../figma/figma";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -143,15 +143,15 @@ export function ProjectsSection() {
     },
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  };
+  // const cardVariants = {
+  //   hidden: { opacity: 0, y: 30, scale: 0.95 },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     scale: 1,
+  //     transition: { duration: 0.5, ease: "easeOut" },
+  //   },
+  // };
 
   const ProjectCard = ({
     project,
@@ -165,7 +165,7 @@ export function ProjectsSection() {
     <motion.div
       id="projects"
       key={`${category}-${project.id}-${index}`}
-      variants={cardVariants}
+      // variants={cardVariants}
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3 }}
       className={project.featured ? "lg:col-span-2" : ""}
@@ -237,7 +237,7 @@ export function ProjectsSection() {
               ))}
             </motion.div>
 
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -317,7 +317,8 @@ export function ProjectsSection() {
   }) => (
     <motion.div
       key={`grid-${category}`}
-      className="grid lg:grid-cols-2 gap-8"
+      className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+      // className="grid grid-cols-1 gap-6"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -367,14 +368,19 @@ export function ProjectsSection() {
                     className="flex items-center gap-2 data-[state=active]:bg-background data-[state=active]:shadow-lg data-[state=active]:bg-white"
                   >
                     <Monitor className="w-4 h-4" />
-                    Web Development
+                    <span className="block  max-[350px]:hidden">
+                      Web Development
+                    </span>
                   </TabsTrigger>
                   <TabsTrigger
                     value="mobile"
                     className="flex items-center gap-2 data-[state=active]:bg-background data-[state=active]:shadow-lg data-[state=active]:bg-white"
                   >
                     <Smartphone className="w-4 h-4" />
-                    Mobile Apps
+
+                    <span className="block  max-[350px]:hidden">
+                      Mobile Apps
+                    </span>
                   </TabsTrigger>
                 </TabsList>
               </div>

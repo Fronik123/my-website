@@ -5,7 +5,6 @@ import type { LucideIcon } from "lucide-react";
 type ButtonMotionProps = {
   outline?: boolean;
   title: string;
-  elementId?: string;
   Icon?: LucideIcon;
   onClick?: () => void;
 };
@@ -13,7 +12,6 @@ type ButtonMotionProps = {
 function ButtonMotion({
   outline = false,
   title,
-  // elementId,
   Icon,
   onClick,
 }: ButtonMotionProps) {
@@ -22,11 +20,6 @@ function ButtonMotion({
     <>
       {outline ? (
         <motion.button
-          // onClick={() =>
-          //   document
-          //     .getElementById(`${elementId}`)
-          //     ?.scrollIntoView({ behavior: "smooth" })
-          // }
           onClick={onClick}
           className="flex item-center gap-2 bg-white text-black border border-black px-4 py-2 rounded-lg hover:bg-gray-200 transition-all"
           whileHover={{ scale: 1.05, cursor: "pointer" }}
@@ -52,11 +45,7 @@ function ButtonMotion({
         </motion.button>
       ) : (
         <motion.button
-          onClick={() =>
-            document
-              .getElementById("about")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={onClick}
           className="flex items-center gap-2 border border-color-black border-border px-4 py-2 rounded-lg hover:bg-muted transition-all text-white bg-black"
           whileHover={{ scale: 1.05, cursor: "pointer" }}
           whileTap={{ scale: 0.95 }}

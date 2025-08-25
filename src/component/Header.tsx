@@ -16,8 +16,13 @@ export function Header() {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
-    setIsMobileMenuOpen(false);
+
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+      element?.scrollIntoView({ block: "start" });
+    } else {
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const navigationItems = ["home", "skills", "projects"];
@@ -27,7 +32,7 @@ export function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || isMobileMenuOpen
           ? "bg-background/80 backdrop-blur-md border-b border-border"
           : ""
       }`}
@@ -77,10 +82,7 @@ export function Header() {
             ))}
           </motion.ul>
 
-          {/* <div className="flex items-center gap-4">
-            Mobile Menu Button
-         
-          </div> */}
+          {/* Mobile Menu Button */}
           <motion.button
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

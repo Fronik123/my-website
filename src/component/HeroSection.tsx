@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import ButtonMotion from "./UI/ButtonMontion";
 import photo from "../assets/photo.svg";
+import cvFile from "../../public/files/Korostelov_CV.pdf";
 
 export function HeroSection() {
   const roles = [
@@ -39,12 +40,12 @@ export function HeroSection() {
   };
 
   const handleDownload = () => {
-    return () => {
-      const link = document.createElement("a");
-      link.href = "/files/Korostelev_CV.pdf";
-      link.download = "Korostelev_CV.pdf";
-      link.click();
-    };
+    console.log("download");
+    const link = document.createElement("a");
+    link.href = cvFile;
+    link.download = "Korostelov_CV.pdf";
+    link.click();
+    console.log("downloaded", link);
   };
 
   return (
@@ -122,9 +123,8 @@ export function HeroSection() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-gray-500 text-lg max-w-lg leading-relaxed font-medium"
             >
-              Passionate frontend developer with 3 years of experience creating
-              modern, user-friendly web applications using React and
-              cutting-edge technologies.
+              Software Engineer who enjoys turning ideas into working products.
+              I am always striving to learn new things and improve my skills.
             </motion.p>
 
             <motion.div
@@ -134,8 +134,8 @@ export function HeroSection() {
               className="flex gap-4"
             >
               <ButtonMotion
+                onClick={() => handleScroll("skills")}
                 title="My skills"
-                onClick={() => handleScroll("contact")}
               />
 
               <ButtonMotion
@@ -147,7 +147,7 @@ export function HeroSection() {
 
               <ButtonMotion
                 Icon={Download}
-                onClick={handleDownload()}
+                onClick={handleDownload}
                 outline
                 title="Download CV"
               />
@@ -248,11 +248,7 @@ export function HeroSection() {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center cursor-pointer"
-            onClick={() =>
-              document
-                .getElementById("about")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
+            onClick={() => handleScroll("skills")}
           >
             <span className="text-sm text-muted-foreground mb-2">
               Scroll down
