@@ -41,8 +41,8 @@ export function MySkills() {
 
   const stats = [
     { label: "Java Script", icon: SiJavascript },
-    { label: "React/React Native", icon: SiReact },
-    { label: "Client Satisfaction", icon: SiTailwindcss },
+    { label: "React / React Native", icon: SiReact },
+    { label: "Tailwind CSS", icon: SiTailwindcss },
     { label: "Next", icon: SiNextdotjs },
   ];
 
