@@ -26,7 +26,7 @@ export function HeroSection() {
     { icon: Github, href: "https://github.com/Fronik123", label: "GitHub" },
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/korostelevm/",
+      href: "https://www.linkedin.com/in/korostelovm/",
       label: "LinkedIn",
     },
     // { icon: Mail, href: "mailto:your.email@example.com", label: "Email" },
@@ -40,21 +40,19 @@ export function HeroSection() {
   };
 
   const handleDownload = () => {
-    console.log("download");
     const link = document.createElement("a");
     link.href = cvFile;
     link.download = "Korostelov_CV.pdf";
     link.click();
-    console.log("downloaded", link);
   };
 
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden"
+      className="min-h-[900px] h-screen flex items-center justify-center md:pt-20  relative overflow-hidden"
     >
       <motion.div
-        className="absolute top-20 left-10 w-20 h-20 border-2 border-primary/20 rounded-full"
+        className="hidden md:block absolute top-20 left-10 w-20 h-20 border-2 border-primary/20 rounded-full"
         animate={{
           rotate: 360,
           scale: [1, 1.2, 1],
@@ -198,26 +196,23 @@ export function HeroSection() {
               }}
               className="relative"
             >
-              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl relative">
+              <div className="w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl relative">
                 <ImageWithFallback
                   src={photo}
                   alt="Professional headshot"
                   className="w-full h-full object-cover"
                 />
-
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"
                   animate={{ opacity: [0.3, 0.1, 0.3] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 />
               </div>
-
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute -inset-4 border-2 border-dashed border-gray-600 rounded-full"
               />
-
               <motion.div
                 className="absolute -top-4 -right-4 w-8 h-8 bg-gray-300 rounded-full"
                 animate={{
@@ -242,7 +237,7 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
-          className="absolute left-1/2 transform -translate-x-1/2"
+          className="relative top-5 left-1/2  transform -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -250,7 +245,7 @@ export function HeroSection() {
             className="flex flex-col items-center cursor-pointer"
             onClick={() => handleScroll("skills")}
           >
-            <span className="text-sm text-muted-foreground mb-2">
+            <span className="text-md font-medium text-muted-foreground mb-2">
               Scroll down
             </span>
 

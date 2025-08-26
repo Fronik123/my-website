@@ -13,126 +13,12 @@ import { ImageWithFallback } from "../figma/figma";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-//images
-import uspacy from "../assets/uspacy-project.png";
-import itech from "../assets/itech-project.png";
-import social from "../assets/social-network.png";
-import marketplace from "../assets/marketplace.webp";
+//data
+import { webProjects } from "../data/showCaseseWeb";
+import { mobileProjects } from "../data/showCaseseMobile";
 
 export function ProjectsSection() {
   const [activeTab, setActiveTab] = useState("web");
-
-  const webProjects = [
-    {
-      id: "web-1",
-      title: "Social network",
-      description:
-        "Fullstack is a social network developed using Next.js, TypeScript, and Express. It supports registration, authorization, post sharing, and user interaction.",
-      image: social,
-      // image:
-      //   "https://images.unsplash.com/photo-1753715613434-9c7cb58876b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb2RpbmclMjBzZXR1cHxlbnwxfHx8fDE3NTU2MzcwNDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Prisma",
-      ],
-      liveUrl:
-        "https://drive.google.com/file/d/1YWi479ELRKJ8X3Yqfth-naNgOrSegWdq/view?usp=sharing",
-      githubUrl: "https://github.com/Fronik123/social-network-front",
-      githubUrlSecondary: "https://github.com/Fronik123/social-network-backend",
-      featured: true,
-      live: false,
-    },
-    {
-      id: "web-2",
-      title: "Uspacy",
-      description:
-        "React web application using Formik and Tailwind CSS, designed for event registration. It features convenient input forms, validation, and a modern adaptive interface.",
-      image: uspacy,
-      // image:
-      //   "https://images.unsplash.com/photo-1554306274-f23873d9a26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHByb2plY3R8ZW58MXx8fHwxNzU1NTgxOTUwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      technologies: ["React", "Formik", "Tailwind CSS", "TypeScript"],
-      liveUrl: "https://fronik123.github.io/uspacy/",
-      githubUrl: "https://github.com/Fronik123/uspacy",
-      githubUrlSecondary: "",
-      featured: false,
-      live: true,
-    },
-    {
-      id: "web-3",
-      title: "Itech web",
-      description:
-        "Is a modern adaptive landing page created using HTML and CSS. The project features cross-browser layout, flexible adaptation to various devices, and smooth animations.",
-      image: itech,
-      technologies: ["HTML 5", "SCSS", "Animation", "Bootstrap"],
-      liveUrl: "https://fronik123.github.io/itech-web/",
-      githubUrl: "https://github.com/Fronik123/itech-web",
-      githubUrlSecondary: "",
-      featured: false,
-      live: true,
-    },
-  ];
-
-  const mobileProjects = [
-    {
-      id: "mobile-1",
-      title: "Marketplace",
-      description:
-        "Marketplace is a mobile app built with React Native for posting and searching ads. It supports adding products, viewing offers, and has a user-friendly interface.",
-      image: marketplace,
-      technologies: ["React Native", "Firebase", "AsyncStorage", "Navigation"],
-      liveUrl:
-        "https://drive.google.com/file/d/1WkwwwLUYYzs21i7wSS7AF7XYo9Mfiogb/view?usp=sharing",
-      githubUrl: "https://github.com/Fronik123/native-card",
-      githubUrlSecondary: "",
-      featured: true,
-      live: false,
-    },
-    // {
-    //   id: "mobile-2",
-    //   title: "Food Delivery App",
-    //   description:
-    //     "Native mobile application for food ordering with real-time tracking, payment integration, and restaurant management system.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1588919350188-7b13c8b44f3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwZGVsaXZlcnklMjBhcHB8ZW58MXx8fHwxNzU1NTk2Nzc3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    //   technologies: [
-    //     "React Native",
-    //     "Redux",
-    //     "Firebase",
-    //     "Maps API",
-    //     "Push Notifications",
-    //   ],
-    //   liveUrl: "#",
-    //   githubUrl: "#",
-    //   githubUrlSecondary: "#",
-    //   featured: false,
-    //   live: true,
-    // },
-    // {
-    //   id: "mobile-3",
-    //   title: "Social Chat App",
-    //   description:
-    //     "Real-time messaging application with group chats, media sharing, and video calls. Built with modern React Native architecture.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBjaGF0JTIwYXBwfGVufDF8fHx8MTc1NTU5Njc3N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    //   technologies: [
-    //     "React Native",
-    //     "Socket.io",
-    //     "WebRTC",
-    //     "Realm",
-    //     "Animations",
-    //   ],
-    //   liveUrl: "#",
-    //   githubUrl: "#",
-    //   githubUrlSecondary: "#",
-    //   featured: false,
-    //   live: true,
-    // },
-  ];
 
   const containerVariants = {
     hidden: {},
@@ -259,26 +145,29 @@ export function ProjectsSection() {
                 </Button>
               </motion.div>
 
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  size="sm"
-                  variant="outline"
-                  asChild
-                  className="hover:bg-primary/5 border-primary/20"
+              {project.githubUrl && (
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    asChild
+                    className="hover:bg-primary/5 border-primary/20"
                   >
-                    <Github className="w-4 h-4 mr-2" />
-                    Code {project.githubUrlSecondary ? "(Frontend)" : ""}
-                  </a>
-                </Button>
-              </motion.div>
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      Code {project.githubUrlSecondary ? "(Frontend)" : ""}
+                    </a>
+                  </Button>
+                </motion.div>
+              )}
+
               {project.githubUrlSecondary && (
                 <motion.div
                   whileHover={{ scale: 1.05 }}
