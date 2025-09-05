@@ -15,12 +15,7 @@ import photo from "../assets/photo.svg";
 import cvFile from "../../public/files/Korostelov_CV.pdf";
 
 export function HeroSection() {
-  const roles = [
-    "Digital Experience Builder",
-    "Software Engineer",
-    "Cross-Platform App Developer",
-    "Full-Stack",
-  ];
+  const roles = ["Software Engineer", "Mobile Dev", "Full Stack"];
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/Fronik123", label: "GitHub" },
@@ -133,21 +128,21 @@ export function HeroSection() {
             >
               <ButtonMotion
                 onClick={() => handleScroll("skills")}
-                title="My skills"
+                title="Skills"
               />
 
               <ButtonMotion
                 onClick={() => handleScroll("projects")}
                 outline
                 Icon={Folder}
-                title="View project"
+                title="Project"
               />
 
               <ButtonMotion
                 Icon={Download}
                 onClick={handleDownload}
                 outline
-                title="Download CV"
+                title="CV"
               />
             </motion.div>
 

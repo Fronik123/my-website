@@ -54,10 +54,10 @@ export function ProjectsSection() {
       // variants={cardVariants}
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3 }}
-      className={project.featured ? "lg:col-span-2" : ""}
+      className={project.featured ? "lg:col-span-2" : " "}
     >
       <Card
-        className={`group overflow-hidden border-0 shadow-xl bg-gradient-to-br from-background to-background/50 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 ${
+        className={`group bg-white overflow-hidden border-0 shadow-xl backdrop-blur-sm hover:shadow-2xl transition-all duration-500 ${
           project.featured ? "lg:grid lg:grid-cols-2 lg:gap-0" : ""
         }`}
       >
@@ -88,7 +88,7 @@ export function ProjectsSection() {
         </div>
 
         <div className={project.featured ? "flex flex-col justify-center" : ""}>
-          <CardHeader className="pb-4">
+          <CardHeader className="pb-4 ">
             <CardTitle className=" text-black text-xl font-semibold duration-300">
               {project.title}
             </CardTitle>
@@ -226,15 +226,14 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden"
+      className="py-20 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden bg-gray-100"
     >
       {/* Background decorations */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_40%,rgba(120,119,198,0.05),transparent_50%)]" />
 
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <motion.h2
-            className="text-3xl text-center mb-12 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent"
+            className="text-3xl text-center mb-12 font-semibold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text "
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

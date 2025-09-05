@@ -69,7 +69,7 @@ export function MySkills() {
           className="text-center mb-16"
         >
           <motion.h2
-            className="text-3xl md:text-5xl mb-4 font-semibold"
+            className="text-3xl md:text-4xl mb-4 font-semibold"
             whileInView={{ scale: [0.9, 1.05, 1] }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}

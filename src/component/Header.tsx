@@ -25,7 +25,16 @@ export function Header() {
     }
   };
 
-  const navigationItems = ["home", "skills", "projects"];
+  const navigationItems = ["home", "skills", "experience", "projects"];
+
+  const underline = {
+    initial: { scaleX: 0, originX: 0 },
+    hover: {
+      scaleX: 1,
+      transition: { duration: 0.25, ease: "easeInOut" as const }, 
+    },
+  };
+
 
   return (
     <motion.header
@@ -65,17 +74,20 @@ export function Header() {
                 transition={{ delay: 0.4 + index * 0.1 }}
               >
                 <motion.button
-                  onClick={() => scrollToSection(item)}
-                  className="hover:text-primary transition-colors duration-200 capitalize relative cursor-pointer hover:font-bold"
-                  whileHover={{ y: -2 }}
-                  whileTap={{ y: 0 }}
+                  type="button"
+                  onClick={() =>{ scrollToSection(item)}}
+                  className="relative cursor-pointer capitalize transition-colors duration-200 hover:text-primary hover:font-bold"
+                  initial="initial"
+                  whileHover="hover"
+                  
                 >
                   {item}
-                  <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
-                    initial={{ scaleX: 0 }}
-                    whileHover={{ scaleX: 1 }}
-                    transition={{ duration: 0.2 }}
+
+                  <motion.span
+                    className="absolute left-0 -bottom-0.5 h-0.5 w-full bg-black "
+                    style={{ transformOrigin: "left" }}
+                    variants={underline}
+                    transition={{ duration: 1 }}
                   />
                 </motion.button>
               </motion.li>
