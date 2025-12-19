@@ -2,6 +2,7 @@ import uspacy from "../assets/uspacy-project.png";
 import itech from "../assets/itech-project.png";
 import social from "../assets/social-network.png";
 import trailhive from "../assets/tamplate_trailhive.png";
+import basketball from "../assets/basketball.png";
 
 export const webProjects = [
   {
@@ -64,6 +65,19 @@ export const webProjects = [
     image: trailhive,
     technologies: ["Webflow", "CMS", "JavaScript", "Animation", "Adaptive"],
     liveUrl: "https://trailhive-a6d391.webflow.io/",
+    githubUrl: "",
+    githubUrlSecondary: "",
+    featured: false,
+    live: true,
+  },
+  {
+    id: "web-5",
+    title: "Basketball Community Hub",
+    description:
+      "A small Webflow project showcasing a clean landing page for a basketball community. The site includes interactive popups, smooth animations, and a modular structure that allows adding new content without code.",
+    image: basketball,
+    technologies: ["Webflow", "GSAP", "Spline", "Animation", "Adaptive"],
+    liveUrl: "https://basketball-73bb13.webflow.io/",
     githubUrl: "",
     githubUrlSecondary: "",
     featured: false,

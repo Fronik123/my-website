@@ -1,4 +1,5 @@
 import marketplace from "../assets/marketplace.webp";
+import trainSchedule from "../assets/train-schedule.png";
 
 export const mobileProjects = [
   {
@@ -13,6 +14,28 @@ export const mobileProjects = [
     githubUrl: "https://github.com/Fronik123/native-card",
     githubUrlSecondary: "",
     featured: true,
+    live: false,
+  },
+  {
+    id: "mobile-2",
+    title: "Train schedule",
+    description:
+      "Native mobile application for food ordering with real-time tracking, payment integration, and restaurant management system.",
+    image: trainSchedule,
+    technologies: [
+      "React Native Expo",
+      "TypeScript",
+      "Nest",
+      "Tailwindcss",
+      "AsyncStorage",
+      "TanStack Query",
+      "JWT",
+    ],
+    liveUrl:
+      "https://drive.google.com/file/d/1MuW01RIFO5XywJC38MfdB2bmr5_MpMhY/view",
+    githubUrl: "https://github.com/Fronik123/train-schedule",
+    githubUrlSecondary: "",
+    featured: false,
     live: false,
   },
   // {
