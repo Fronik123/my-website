@@ -1,17 +1,17 @@
 import marketplace from "../assets/marketplace.webp";
 import trainSchedule from "../assets/train-schedule.png";
+import rentCar from "../assets/rent-car.webp";
 
 export const mobileProjects = [
   {
     id: "mobile-1",
-    title: "Marketplace",
+    title: "Rent Car",
     description:
-      "Marketplace is a mobile app built with React Native for posting and searching ads. It supports adding products, viewing offers, and has a user-friendly interface.",
-    image: marketplace,
-    technologies: ["React Native", "Firebase", "AsyncStorage", "Navigation"],
-    liveUrl:
-      "https://drive.google.com/file/d/1WkwwwLUYYzs21i7wSS7AF7XYo9Mfiogb/view?usp=sharing",
-    githubUrl: "https://github.com/Fronik123/native-card",
+      "Mobile app for luxury car rental: browse catalog, view details and pricing, manage profile. Built with Expo, React Native, TypeScript, and Supabase.",
+    image: rentCar,
+    technologies: ["React Native Expo", "Supabase", "TypeScript", "TanStack", 'Expo Router'],
+    liveUrl: '',
+    githubUrl: "https://github.com/Fronik123/rent-car",
     githubUrlSecondary: "",
     featured: true,
     live: false,
@@ -34,6 +34,22 @@ export const mobileProjects = [
     liveUrl:
       "https://drive.google.com/file/d/1MuW01RIFO5XywJC38MfdB2bmr5_MpMhY/view",
     githubUrl: "https://github.com/Fronik123/train-schedule",
+    githubUrlSecondary: "",
+    featured: false,
+    live: false,
+  },
+  {
+    id: "mobile-3",
+    title: "Marketplace",
+    description:
+      "Marketplace is a mobile app built with React Native for posting and searching ads. It supports adding products, viewing offers, and has a user-friendly interface.",
+    image: marketplace,
+    technologies: ["React Native", "Firebase", "AsyncStorage", "Navigation", 
+      'Axios', 'Redux'
+    ],
+    liveUrl:
+      "https://drive.google.com/file/d/1WkwwwLUYYzs21i7wSS7AF7XYo9Mfiogb/view?usp=sharing",
+    githubUrl: "https://github.com/Fronik123/native-card",
     githubUrlSecondary: "",
     featured: false,
     live: false,

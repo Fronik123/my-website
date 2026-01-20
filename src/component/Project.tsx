@@ -124,27 +124,27 @@ export function ProjectsSection() {
             </motion.div>
 
             <div className="flex gap-3 flex-wrap">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  size="sm"
-                  asChild
-                  className="bg-black text-white from-primary hover:from-primary/90 hover:to-primary/70"
+              {project.liveUrl && (
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Button
+                    size="sm"
+                    asChild
+                    className="bg-black text-white from-primary hover:from-primary/90 hover:to-primary/70"
                   >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-
-                    {project.live ? "Live Demo" : "Watch video"}
-                  </a>
-                </Button>
-              </motion.div>
-
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      {project.live ? "Live Demo" : "Watch video"}
+                    </a>
+                  </Button>
+                </motion.div>
+              )}
               {project.githubUrl && (
                 <motion.div
                   whileHover={{ scale: 1.05 }}
