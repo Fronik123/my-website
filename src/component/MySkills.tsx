@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { Database } from "lucide-react";
 import {
-  SiJavascript,
+  SiTypescript,
+  SiGithub,
   SiNestjs,
   SiReact,
-  SiNextdotjs,
   SiTailwindcss,
   SiNodedotjs,
   SiPrisma,
@@ -40,10 +40,10 @@ export function MySkills() {
   ];
 
   const stats = [
-    { label: "Java Script", icon: SiJavascript },
-    { label: "React / React Native", icon: SiReact },
-    { label: "Tailwind CSS", icon: SiTailwindcss },
-    { label: "Next", icon: SiNextdotjs },
+    { label: "Git", icon: SiGithub },
+    { label: "Java Script / TypeScript", icon: SiTypescript },
+    { label: "React / React Native / Next", icon: SiReact },
+    { label: "Tailwind CSS / MUI / AntD / SCSS", icon: SiTailwindcss },
   ];
 
   return (

@@ -12,6 +12,7 @@ export const experiences = [
       "React Native",
       "Next.js",
       "Node.js",
+      'Redux',
       "TypeScript",
       "Tailwind CSS",
     ],

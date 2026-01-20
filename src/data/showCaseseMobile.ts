@@ -25,6 +25,7 @@ export const mobileProjects = [
     technologies: [
       "React Native Expo",
       "TypeScript",
+      'Node.js',
       "Nest",
       "Tailwindcss",
       "AsyncStorage",
