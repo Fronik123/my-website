@@ -1,6 +1,6 @@
 import marketplace from "../assets/marketplace.webp";
 import trainSchedule from "../assets/train-schedule.png";
-import rentCar from "../assets/rent-car.webp";
+import rentCar from "../assets/rent-car.png";
 
 export const mobileProjects = [
   {
