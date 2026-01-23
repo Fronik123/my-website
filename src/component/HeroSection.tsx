@@ -15,7 +15,7 @@ import photo from "../assets/photo.svg";
 import cvFile from "../../public/files/Korostelov_CV.pdf";
 
 export function HeroSection() {
-  const roles = ["Software Engineer", "Mobile Dev", "Full Stack"];
+  const roles = ["Frontend Engineer", "React Naive", "Full Stack"];
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/Fronik123", label: "GitHub" },
@@ -115,9 +115,9 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-gray-500 text-lg max-w-lg leading-relaxed font-medium"
-            >
-              Software Engineer who enjoys turning ideas into working products.
-              I am always striving to learn new things and improve my skills.
+            >  
+              Full-Stack Developer turning ideas into working products.
+              Focused on building and improving real-world web applications.
             </motion.p>
 
             <motion.div

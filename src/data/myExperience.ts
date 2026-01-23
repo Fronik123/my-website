@@ -6,7 +6,7 @@ export const experiences = [
     period: "Sep 2021 - Jul 2025 · 3 yrs 11 mos",
     location: "Hybrid",
     description:
-      "Participated in the development of full-featured web and mobile applications using React, React Native, Next.js, and Node.js. Worked with TypeScript, Tailwind CSS, Firebase, and REST APIs. Implemented forms, state management with Redux, as well as navigation and authentication functionality. Optimized application performance and user experience.",
+      "Developed and maintained full-featured web and mobile applications using React, React Native, Next.js, and Node.js. Worked extensively with TypeScript, Tailwind CSS, Firebase, and REST APIs. Implemented complex forms, state management with Redux, authentication flows, and navigation. Improved application performance and overall user experience.",
     technologies: [
       "React",
       "React Native",
