@@ -9,7 +9,9 @@ export const mobileProjects = [
     description:
       "Mobile app for luxury car rental: browse catalog, view details and pricing, manage profile. Built with Expo, React Native, TypeScript, and Supabase.",
     image: rentCar,
-    technologies: ["React Native Expo", "Supabase", "TypeScript", "TanStack Query", 'Expo Router', 'Change Theme'],
+    technologies: ["React Native Expo", "Supabase", "TypeScript", "TanStack Query", 'Expo Router', 'Change Theme', 
+      'Localization',
+    ],
     liveUrl: '',
     githubUrl: "https://github.com/Fronik123/rent-car",
     githubUrlSecondary: "",
