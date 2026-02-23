@@ -9,10 +9,17 @@ export const mobileProjects = [
     description:
       "Mobile app for luxury car rental: browse catalog, view details and pricing, manage profile. Built with Expo, React Native, TypeScript, and Supabase.",
     image: rentCar,
-    technologies: ["React Native Expo", "Supabase", "TypeScript", "TanStack Query", 'Expo Router', 'Change Theme', 
-      'Localization',
+    technologies: [
+      "React Native Expo",
+      "Supabase",
+      "TypeScript",
+      "TanStack Query",
+      "Expo Router",
+      "Change Theme",
+      "Localization",
+      "Zod",
     ],
-    liveUrl: '',
+    liveUrl: "",
     githubUrl: "https://github.com/Fronik123/rent-car",
     githubUrlSecondary: "",
     featured: true,
@@ -27,7 +34,7 @@ export const mobileProjects = [
     technologies: [
       "React Native Expo",
       "TypeScript",
-      'Node.js',
+      "Node.js",
       "Nest",
       "Tailwindcss",
       "AsyncStorage",
@@ -47,8 +54,13 @@ export const mobileProjects = [
     description:
       "Marketplace is a mobile app built with React Native for posting and searching ads. It supports adding products, viewing offers, and has a user-friendly interface.",
     image: marketplace,
-    technologies: ["React Native", "Firebase", "AsyncStorage", "Navigation", 
-      'Axios', 'Redux'
+    technologies: [
+      "React Native",
+      "Firebase",
+      "AsyncStorage",
+      "Navigation",
+      "Axios",
+      "Redux",
     ],
     liveUrl:
       "https://drive.google.com/file/d/1WkwwwLUYYzs21i7wSS7AF7XYo9Mfiogb/view?usp=sharing",
